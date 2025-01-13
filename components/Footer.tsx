@@ -19,7 +19,6 @@ const Footer = () => {
                                 alt="logo"
                                 width={90}
                                 height={90}
-                                className="mt-3"
                             />
                         </div>
                         <div>
@@ -37,25 +36,25 @@ const Footer = () => {
                 <div>
                     <div className="font-bold mb-2">Layanan</div>
                     <div className="mb-1">
-                        <Link href="#" className="hover:text-green-900 hover:font-semibold text-sm">Desain Arsitektur</Link>
+                        <Link href="#" className="hover:text-green-900 text-sm">Desain Arsitektur</Link>
                     </div>
                     <div className="mb-1">
-                        <Link href="#" className="hover:text-green-900 hover:font-semibold text-sm">Manajemen Konstruksi</Link>
+                        <Link href="#" className="hover:text-green-900 text-sm">Manajemen Konstruksi</Link>
                     </div>
                     <div className="mb-1">
-                        <Link href="#" className="hover:text-green-900 hover:font-semibold text-sm">Sertifikat Laik Fungsi</Link>
+                        <Link href="#" className="hover:text-green-900 text-sm">Sertifikat Laik Fungsi</Link>
                     </div>
                 </div>
                 <div>
                     <div className="font-bold mb-2">Perusahaan</div>
                     <div className="mb-1">
-                        <Link href="#" className="hover:text-green-900 hover:font-semibold text-sm">Profil</Link>
+                        <Link href="#" className="hover:text-green-900 text-sm">Profil</Link>
                     </div>
                     <div className="mb-1">
-                        <Link href="#" className="hover:text-green-900 hover:font-semibold text-sm">Portofolio</Link>
+                        <Link href="#" className="hover:text-green-900 text-sm">Portofolio</Link>
                     </div>
                     <div className="mb-1">
-                        <Link href="#" className="hover:text-green-900 hover:font-semibold text-sm">Berita</Link>
+                        <Link href="#" className="hover:text-green-900 text-sm">Berita</Link>
                     </div>
                 </div>
                 <div className="col-span-2">

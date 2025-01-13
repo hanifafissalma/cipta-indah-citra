@@ -9,7 +9,7 @@ const LayoutDefault: FC<LayoutProps> = (props: LayoutProps) => {
     return(
         <>
             <Navbar />
-            <div className="flex mx-auto justify-between w-5/6 py-12 bg-white">
+            <div className="mx-auto bg-white">
                 {props.children}
             </div>
             <Footer />

@@ -29,12 +29,6 @@ const Navbar = () => {
                             </Link>
                         </div>
                         <div className="hidden lg:flex h-full lg:items-center">
-                            <Link 
-                                href="#" 
-                                className="hover:bg-green-900 hover:text-white text-center transition-colors duration-300 flex items-center justify-center h-full px-4 font-semibold text-green-900"
-                            >
-                                Home
-                            </Link>
                             <div
                                 className="relative group h-full"
                                 // onMouseEnter={() => setShowSubMenu(true)}
