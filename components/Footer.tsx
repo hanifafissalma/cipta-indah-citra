@@ -21,7 +21,7 @@ const Footer = () => {
                             </div>
                             <div>
                                 <div className="text-md font-bold">PT CIPTA INDAH CITRA</div>
-                                <div className="text-xs">Desain Arsitektur, Manajemen Konstruksi (MK) & Pengkaji Sertifikat Laik Fungsi (SLF)</div>
+                                <div className="text-xs">Design Arsitektur, Manajemen Konstruksi (MK) & Pengkaji Sertifikat Laik Fungsi (SLF)</div>
                                 <div className="text-xs">Arsitektur, Struktur, Mekanikal, Elektrikal & Teknik Lingkungan</div>
                                 <div className="flex flex-row gap-3 mt-2">
                                     <Link href="#"><Facebook/></Link>
@@ -34,25 +34,28 @@ const Footer = () => {
                     <div>
                         <div className="font-bold mb-2">Layanan</div>
                         <div className="mb-1">
-                            <Link href="#" className="hover:text-green-900 text-sm">Desain Arsitektur</Link>
+                            <Link href="/design-arsitektur" className="hover:text-green-900 text-sm">Design Arsitektur</Link>
                         </div>
                         <div className="mb-1">
-                            <Link href="#" className="hover:text-green-900 text-sm">Manajemen Konstruksi</Link>
+                            <Link href="/manajemen-konstruksi" className="hover:text-green-900 text-sm">Manajemen Konstruksi</Link>
                         </div>
                         <div className="mb-1">
-                            <Link href="#" className="hover:text-green-900 text-sm">Sertifikat Laik Fungsi</Link>
+                            <Link href="/sertifikat-laik-fungsi" className="hover:text-green-900 text-sm">Sertifikat Laik Fungsi</Link>
                         </div>
                     </div>
                     <div>
                         <div className="font-bold mb-2">Perusahaan</div>
                         <div className="mb-1">
-                            <Link href="#" className="hover:text-green-900 text-sm">Profil</Link>
+                            <Link href="/profil" className="hover:text-green-900 text-sm">Profil</Link>
                         </div>
                         <div className="mb-1">
-                            <Link href="#" className="hover:text-green-900 text-sm">Portofolio</Link>
+                            <Link href="/portofolio" className="hover:text-green-900 text-sm">Portofolio</Link>
                         </div>
                         <div className="mb-1">
-                            <Link href="#" className="hover:text-green-900 text-sm">Berita</Link>
+                            <Link href="/pengalaman-konsultan" className="hover:text-green-900 text-sm">Pengalaman Konsultan</Link>
+                        </div>
+                        <div className="mb-1">
+                            <Link href="/berita" className="hover:text-green-900 text-sm">Berita</Link>
                         </div>
                     </div>
                     <div className="col-span-2">
@@ -63,12 +66,12 @@ const Footer = () => {
                             </span>
                             <span className="ml-2 text-sm">0821-2566-0808</span>
                         </div>
-                        <div className="mb-2 flex flex-row gap-2">
+                        <Link href="mailto:pt.ciptaindahcitraptk@gmail.com" className="mb-2 flex flex-row gap-2 hover:text-green-900">
                             <span className="material-symbols-outlined text-green-900">
                                 mail
                             </span>
                             <span className="ml-2 text-sm">pt.ciptaindahcitraptk@gmail.com</span>
-                        </div>
+                        </Link>
                         <div className="mb-2 flex flex-row gap-2">
                             <span className="material-symbols-outlined text-green-900">
                                 location_on
@@ -79,6 +82,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
+            <div className="text-sm text-center">© Copyright {new Date().getFullYear()} PT Cipta Indah Citra. All Rights Reserved.</div>
         </footer>
     )
 }

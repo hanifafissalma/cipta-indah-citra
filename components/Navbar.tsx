@@ -34,7 +34,7 @@ const Navbar = () => {
                                 <Link
                                     href="#"
                                     onClick={() => setShowSubMenu(!showSubMenu)}
-                                    className="hover:bg-green-900 hover:text-white text-center transition-colors duration-300 flex items-center justify-center h-full px-4 font-semibold text-green-900"
+                                    className={`hover:bg-green-900 hover:text-white text-center transition-colors duration-300 flex items-center justify-center h-full px-4 font-semibold ${pathname === '/design-arsitektur' || pathname === '/manajemen-konstruksi' || pathname === '/sertifikat-laik-fungsi' ? 'bg-green-900 text-white' : 'text-green-900 bg-white'}`}
                                 >
                                     Layanan 
                                     <span className="ml-2">
@@ -52,19 +52,19 @@ const Navbar = () => {
                                     }`}
                                 >
                                     <Link
-                                        href="#"
+                                        href="/design-arsitektur"
                                         className="block px-4 py-2 text-green-900 hover:bg-green-900 hover:text-white"
                                     >
-                                        Desain Arsitektur
+                                        Design Arsitektur
                                     </Link>
                                     <Link
-                                        href="#"
+                                        href="/manajemen-konstruksi"
                                         className="block px-4 py-2 text-green-900 hover:bg-green-900 hover:text-white"
                                     >
                                         Manajemen Konstruksi
                                     </Link>
                                     <Link
-                                        href="#"
+                                        href="/sertifikat-laik-fungsi"
                                         className="block px-4 py-2 text-green-900 hover:bg-green-900 hover:text-white"
                                     >
                                         Sertifikat Laik Fungsi
@@ -78,14 +78,20 @@ const Navbar = () => {
                                 Profil
                             </Link>
                             <Link 
-                                href="#" 
-                                className="hover:bg-green-900 hover:text-white text-center transition-colors duration-300 flex items-center justify-center h-full px-4 font-semibold text-green-900"
+                                href="/portofolio" 
+                                className={`hover:bg-green-900 hover:text-white text-center transition-colors duration-300 flex items-center justify-center h-full px-4 font-semibold ${pathname === '/portofolio' ? 'bg-green-900 text-white' : 'text-green-900 bg-white'}`}
                             >
                                 Portofolio
                             </Link>
                             <Link 
-                                href="#" 
-                                className="hover:bg-green-900 hover:text-white text-center transition-colors duration-300 flex items-center justify-center h-full px-4 font-semibold text-green-900"
+                                href="/pengalaman-konsultan" 
+                                className={`hover:bg-green-900 hover:text-white text-center transition-colors duration-300 flex items-center justify-center h-full px-4 font-semibold ${pathname === '/pengalaman-konsultan' ? 'bg-green-900 text-white' : 'text-green-900 bg-white'}`}
+                            >
+                                Pengalaman Konsultan
+                            </Link>
+                            <Link 
+                                href="/berita" 
+                                className={`hover:bg-green-900 hover:text-white text-center transition-colors duration-300 flex items-center justify-center h-full px-4 font-semibold ${pathname === '/berita' ? 'bg-green-900 text-white' : 'text-green-900 bg-white'}`}
                             >
                                 Berita
                             </Link>
@@ -128,19 +134,19 @@ const Navbar = () => {
                             {showMobileSubmenu && (
                                 <div className="flex flex-col pl-6">
                                     <Link
-                                        href="#"
+                                        href="/design-arsitektur"
                                         className="block px-4 py-2 text-green-900 hover:bg-green-900 hover:text-white"
                                     >
-                                        Desain Arsitektur
+                                        Design Arsitektur
                                     </Link>
                                     <Link
-                                        href="#"
+                                        href="/manajemen-konstruksi"
                                         className="block px-4 py-2 text-green-900 hover:bg-green-900 hover:text-white"
                                     >
                                         Manajemen Konstruksi
                                     </Link>
                                     <Link
-                                        href="#"
+                                        href="/sertifikat-laik-fungsi"
                                         className="block px-4 py-2 text-green-900 hover:bg-green-900 hover:text-white"
                                     >
                                         Sertifikat Laik Fungsi
@@ -149,8 +155,9 @@ const Navbar = () => {
                             )}
                         </div>
                         <Link href="/profil" className="block px-4 py-2 text-green-900 hover:bg-green-900 hover:text-white flex justify-between items-center w-full">Profil</Link>
-                        <Link href="#" className="block px-4 py-2 text-green-900 hover:bg-green-900 hover:text-white flex justify-between items-center w-full">Portofolio</Link>
-                        <Link href="#" className="block px-4 py-2 text-green-900 hover:bg-green-900 hover:text-white flex justify-between items-center w-full">Berita</Link>
+                        <Link href="/portofolio" className="block px-4 py-2 text-green-900 hover:bg-green-900 hover:text-white flex justify-between items-center w-full">Portofolio</Link>
+                        <Link href="/pengalaman-konsultan" className="block px-4 py-2 text-green-900 hover:bg-green-900 hover:text-white flex justify-between items-center w-full">Pengalaman Konsultan</Link>
+                        <Link href="/berita" className="block px-4 py-2 text-green-900 hover:bg-green-900 hover:text-white flex justify-between items-center w-full">Berita</Link>
                         <Link href="/hubungi-kami" className="block px-4 py-2 text-green-900 hover:bg-green-900 hover:text-white flex justify-between items-center w-full">Hubungi Kami</Link>
                     </div>
                 </div>

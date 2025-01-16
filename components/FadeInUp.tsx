@@ -1,4 +1,4 @@
-
+"use client"
 import React, { FC, ReactNode, useEffect, useRef, useState } from "react";
 interface LayoutProps {
     children: ReactNode

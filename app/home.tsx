@@ -7,7 +7,7 @@ import bg2 from '@/public/bg-2.png'
 import carousel2 from '@/public/carousel_2.png'
 import Link from "next/link";
 import Image from "next/image";
-import FadeInUp from "@/components/FadeInUp.";
+import FadeInUp from "@/components/FadeInUp";
 
 const HalamanUtama = () => {
     return(
@@ -30,7 +30,7 @@ const HalamanUtama = () => {
                     </FadeInUp>
                     <FadeInUp delay=".4s">
                         <div className="text-2xl text-white drop-shadow-md font-semibold mb-4 lg:w-3/4 sm:w-full">
-                            Berpengalaman mewujudkan desain berkualitas tinggi
+                            Berpengalaman mewujudkan design berkualitas tinggi
                             dengan keahlian dan inovasi yang menjadi solusi
                             arsitektur terbaik untuk Anda.
                         </div>
@@ -38,7 +38,7 @@ const HalamanUtama = () => {
                     <FadeInUp delay=".8s">
                         <Link 
                             href="#"
-                            className="font-semibold bg-customYellow text-white lg:w-2/6 sm:w-full py-2 flex items-center justify-center border-customYellow rounded border hover:border-customYellow hover:bg-white hover:text-customYellow"
+                            className="font-semibold bg-customYellow text-white lg:w-2/6 sm:w-full py-2 flex items-center justify-center border-customYellow rounded border hover:shadow-lg"
                         >
                             Konsultasi Sekarang
                         </Link>
@@ -75,7 +75,7 @@ const HalamanUtama = () => {
                     <FadeInUp delay=".8s">
                         <Link 
                             href="#"
-                            className="font-semibold bg-customYellow text-white w-full py-2 flex items-center justify-center border-customYellow rounded border hover:border-customYellow hover:bg-white hover:text-customYellow"
+                            className="font-semibold bg-customYellow text-white py-2 flex items-center justify-center border-customYellow rounded border hover:shadow-lg"
                         >
                             Konsultasi Sekarang
                         </Link>
@@ -99,16 +99,16 @@ const HalamanUtama = () => {
                                     />
                                 </div>
                                 <div className="p-4 ">
-                                    <h6 className="mb-2 text-slate-800 text-xl font-semibold">
-                                        Desain Arsitektur
+                                    <h6 className="mb-2 text-slate-600 text-xl font-semibold">
+                                        Design Arsitektur
                                     </h6>
                                     <p className="text-slate-600 leading-normal font-light text-justify">
-                                        Jasa desain bangunan, mulai dari konsultasi 
+                                        Jasa design bangunan, mulai dari konsultasi 
                                         perizinan sampai PBG (Persetujuan Bangunan Gedung)
                                     </p>
                                 </div>
                                 <div className="px-4 pb-4 pt-0 mt-2 flex justify-end">
-                                    <Link href="#" className="rounded-md bg-white py-2 px-4 border border-green-900 text-center text-sm text-green-900 transition-all shadow-md hover:shadow-lg focus:bg-green-700 focus:shadow-none active:bg-green-900 hover:bg-green-900 hover:text-white active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                                    <Link href="/design-arsitektur" className="rounded-md bg-white py-2 px-4 border border-green-900 text-center text-sm text-green-900 transition-all shadow-md hover:shadow-lg focus:bg-green-700 focus:shadow-none active:bg-green-900 hover:bg-green-900 hover:text-white active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
                                         Pelajari lebih lanjut
                                     </Link>
                                 </div>
@@ -125,7 +125,7 @@ const HalamanUtama = () => {
                                     />
                                 </div>
                                 <div className="p-4">
-                                    <h6 className="mb-2 text-slate-800 text-xl font-semibold">
+                                    <h6 className="mb-2 text-slate-600 text-xl font-semibold">
                                         Manajemen Konstruksi
                                     </h6>
                                     <p className="text-slate-600 leading-normal font-light text-justify">
@@ -133,7 +133,7 @@ const HalamanUtama = () => {
                                     </p>
                                 </div>
                                 <div className="px-4 pb-4 pt-0 mt-2 flex justify-end">
-                                    <Link href="#" className="rounded-md bg-white py-2 px-4 border border-green-900 text-center text-sm text-green-900 transition-all shadow-md hover:shadow-lg focus:bg-green-700 focus:shadow-none active:bg-green-900 hover:bg-green-900 hover:text-white active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                                    <Link href="/manajemen-konstruksi" className="rounded-md bg-white py-2 px-4 border border-green-900 text-center text-sm text-green-900 transition-all shadow-md hover:shadow-lg focus:bg-green-700 focus:shadow-none active:bg-green-900 hover:bg-green-900 hover:text-white active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
                                         Pelajari lebih lanjut
                                     </Link>
                                 </div>
@@ -150,7 +150,7 @@ const HalamanUtama = () => {
                                     />
                                 </div>
                                 <div className="p-4">
-                                    <h6 className="mb-2 text-slate-800 text-xl font-semibold">
+                                    <h6 className="mb-2 text-slate-600 text-xl font-semibold">
                                         Sertifikat Laik Fungsi
                                     </h6>
                                     <p className="text-slate-600 leading-normal font-light text-justify">
@@ -158,7 +158,7 @@ const HalamanUtama = () => {
                                     </p>
                                 </div>
                                 <div className="px-4 pb-4 pt-0 mt-2 flex justify-end">
-                                    <Link href="#" className="rounded-md bg-white py-2 px-4 border border-green-900 text-center text-sm text-green-900 transition-all shadow-md hover:shadow-lg focus:bg-green-700 focus:shadow-none active:bg-green-900 hover:bg-green-900 hover:text-white active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                                    <Link href="/sertifikat-laik-fungsi" className="rounded-md bg-white py-2 px-4 border border-green-900 text-center text-sm text-green-900 transition-all shadow-md hover:shadow-lg focus:bg-green-700 focus:shadow-none active:bg-green-900 hover:bg-green-900 hover:text-white active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
                                         Pelajari lebih lanjut
                                     </Link>
                                 </div>
@@ -232,7 +232,7 @@ const HalamanUtama = () => {
                         <center>
                             <Link 
                                 href="#"
-                                className="mt-16 font-semibold bg-customYellow text-white lg:w-1/2 sm:w-full py-2 flex items-center justify-center border-customYellow rounded border hover:border-customYellow hover:bg-white hover:text-customYellow"
+                                className="mt-16 font-semibold font-semibold bg-customYellow text-white lg:w-2/3 sm:w-full py-2 flex items-center justify-center border-customYellow rounded border hover:shadow-lg"
                             >
                                 Konsultasi Sekarang
                             </Link>
