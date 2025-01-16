@@ -9,7 +9,7 @@ const LayoutDefault: FC<LayoutProps> = (props: LayoutProps) => {
     return(
         <>
             <Navbar />
-            <div className="mx-auto bg-white">
+            <div className="mx-auto bg-white relative mt-20">
                 {props.children}
             </div>
             <Footer />

@@ -1,17 +1,16 @@
+"use client"
 import Link from "next/link"
 import Image from "next/image"
 import { useState } from "react";
-import Menu from "@/configs/icons/Menu";
-import Close from "@/configs/icons/Close";
-import ArrowDropDown from "@/configs/icons/ArrowDropDown";
-import ArrowDropUp from "@/configs/icons/ArrowDropUp";
+import { usePathname } from "next/navigation"
 
 const Navbar = () => {
     const [toggleMenu, setToggleMenu] = useState(false)
     const [showSubMenu, setShowSubMenu] = useState(false)
     const [showMobileSubmenu, setShowMobileSubmenu] = useState(false)
+    const pathname = usePathname()
     return(
-        <nav>
+        <nav className="fixed top-0 z-50 bg-white w-full">
             <div className="max-w-7xl mx-auto shadow-sm">
                 <div className="flex mx-auto justify-between w-5/6 ">
                     <div className="flex items-center gap-16 h-[80px]">
@@ -31,15 +30,20 @@ const Navbar = () => {
                         <div className="hidden lg:flex h-full lg:items-center">
                             <div
                                 className="relative group h-full"
-                                // onMouseEnter={() => setShowSubMenu(true)}
-                                // onMouseLeave={() => setShowSubMenu(false)}
                             >
                                 <Link
                                     href="#"
                                     onClick={() => setShowSubMenu(!showSubMenu)}
                                     className="hover:bg-green-900 hover:text-white text-center transition-colors duration-300 flex items-center justify-center h-full px-4 font-semibold text-green-900"
                                 >
-                                    Layanan <span className="ml-2">{showSubMenu ? <ArrowDropUp color='#FFFFFF'/> : <ArrowDropDown color='#588B8B'/>}</span>
+                                    Layanan 
+                                    <span className="ml-2">
+                                        {showSubMenu ? 
+                                            <span className="material-symbols-outlined mt-1">arrow_drop_up</span> 
+                                            : 
+                                            <span className="material-symbols-outlined mt-1">arrow_drop_down</span>
+                                        }
+                                    </span>
                                 </Link>
                                 {/* Submenu */}
                                 <div
@@ -68,8 +72,8 @@ const Navbar = () => {
                                 </div>
                                 </div>
                             <Link 
-                                href="#" 
-                                className="hover:bg-green-900 hover:text-white text-center transition-colors duration-300 flex items-center justify-center h-full px-4 font-semibold text-green-900"
+                                href="/profil" 
+                                className={`hover:bg-green-900 hover:text-white text-center transition-colors duration-300 flex items-center justify-center h-full px-4 font-semibold ${pathname === '/profil' ? 'bg-green-900 text-white' : 'text-green-900 bg-white'}`}
                             >
                                 Profil
                             </Link>
@@ -86,8 +90,8 @@ const Navbar = () => {
                                 Berita
                             </Link>
                             <Link 
-                                href="#" 
-                                className="hover:bg-green-900 hover:text-white text-center transition-colors duration-300 flex items-center justify-center h-full px-4 font-semibold text-green-900"
+                                href="/hubungi-kami" 
+                                className={`hover:bg-green-900 hover:text-white text-center transition-colors duration-300 flex items-center justify-center h-full px-4 font-semibold ${pathname === '/hubungi-kami' ? 'bg-green-900 text-white' : 'text-green-900 bg-white'}`}
                             >
                                 Hubungi Kami
                             </Link>
@@ -96,7 +100,11 @@ const Navbar = () => {
                     <div className="flex gap-6">
                         <div className="lg:hidden flex items-center">
                             <button onClick={() => setToggleMenu(!toggleMenu)}>
-                                {toggleMenu ? <Close/> : <Menu />}
+                                {toggleMenu ? 
+                                    <span className="material-symbols-outlined">close</span> 
+                                    : 
+                                    <span className="material-symbols-outlined">menu</span> 
+                                }
                             </button>
                         </div>
                     </div>
@@ -140,9 +148,10 @@ const Navbar = () => {
                                 </div>
                             )}
                         </div>
-                        <Link href="#" className="block px-4 py-2 text-green-900 hover:bg-green-900 hover:text-white flex justify-between items-center w-full">Pricing</Link>
-                        <Link href="#" className="block px-4 py-2 text-green-900 hover:bg-green-900 hover:text-white flex justify-between items-center w-full">Download</Link>
-                        <Link href="#" className="block px-4 py-2 text-green-900 hover:bg-green-900 hover:text-white flex justify-between items-center w-full">Classic</Link>
+                        <Link href="/profil" className="block px-4 py-2 text-green-900 hover:bg-green-900 hover:text-white flex justify-between items-center w-full">Profil</Link>
+                        <Link href="#" className="block px-4 py-2 text-green-900 hover:bg-green-900 hover:text-white flex justify-between items-center w-full">Portofolio</Link>
+                        <Link href="#" className="block px-4 py-2 text-green-900 hover:bg-green-900 hover:text-white flex justify-between items-center w-full">Berita</Link>
+                        <Link href="/hubungi-kami" className="block px-4 py-2 text-green-900 hover:bg-green-900 hover:text-white flex justify-between items-center w-full">Hubungi Kami</Link>
                     </div>
                 </div>
             </div>

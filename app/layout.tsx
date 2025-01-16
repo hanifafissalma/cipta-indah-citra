@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-page-custom-font */
 import { Karla } from "next/font/google";
 import "./globals.css";
+import "./globalicon.css";
 import { favicons, siteConfig } from '@/configs/siteconfig'
 
 
@@ -52,6 +53,7 @@ export default function RootLayout({
           httpEquiv="Content-Security-Policy"
           content="upgrade-insecure-requests" />
         <meta name="theme-color" content="#ffffff" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link
           rel="stylesheet"
           type="text/css"

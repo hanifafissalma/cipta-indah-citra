@@ -23,8 +23,15 @@ export default {
           800: "rgba(88, 139, 139, 0.9)",
           900: "rgba(88, 139, 139, 1)",
         },
-        black: '#2C2B2B'
+        black: '#2C2B2B',
+        customYellow: "#F4AC45"
       },
+    },
+    screens: {
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
     },
   },
   plugins: [],
