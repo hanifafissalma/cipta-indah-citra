@@ -26,6 +26,9 @@ export default {
         black: '#2C2B2B',
         customYellow: "#F4AC45"
       },
+      transitionProperty: {
+        transform: "transform",
+      },
     },
     screens: {
       sm: '640px',

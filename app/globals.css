@@ -33,3 +33,40 @@ body {
   height: 600px;
 }
 
+@keyframes fadeInUp{
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.animate_fadeInUp{
+  animation-name: fadeInUp;
+  -webkit-animation-name: fadeInUp;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+}
+
+.delay-1{
+  animation-delay: .4s;
+}
+
+.delay-2{
+  animation-delay: .8s;
+}
+
+.delay-3{
+  animation-delay: 1.2s;
+}
+
+.delay-4{
+  animation-delay: 1.6s;
+}
+
+.delay-5{
+  animation-delay: 2s;
+}
