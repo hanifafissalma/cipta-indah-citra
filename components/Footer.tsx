@@ -55,7 +55,7 @@ const Footer = () => {
                             <Link href="/pengalaman-konsultan" className="hover:text-green-900 text-sm">Pengalaman Konsultan</Link>
                         </div>
                         <div className="mb-1">
-                            <Link href="/berita" className="hover:text-green-900 text-sm">Berita</Link>
+                            <Link href="/informasi" className="hover:text-green-900 text-sm">Informasi</Link>
                         </div>
                     </div>
                     <div className="col-span-2">

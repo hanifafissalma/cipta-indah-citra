@@ -90,10 +90,10 @@ const Navbar = () => {
                                 Pengalaman Konsultan
                             </Link>
                             <Link 
-                                href="/berita" 
-                                className={`hover:bg-green-900 hover:text-white text-center transition-colors duration-300 flex items-center justify-center h-full px-4 font-semibold ${pathname === '/berita' ? 'bg-green-900 text-white' : 'text-green-900 bg-white'}`}
+                                href="/informasi" 
+                                className={`hover:bg-green-900 hover:text-white text-center transition-colors duration-300 flex items-center justify-center h-full px-4 font-semibold ${pathname === '/informasi' ? 'bg-green-900 text-white' : 'text-green-900 bg-white'}`}
                             >
-                                Berita
+                                Informasi
                             </Link>
                             <Link 
                                 href="/hubungi-kami" 
@@ -157,7 +157,7 @@ const Navbar = () => {
                         <Link href="/profil" className="block px-4 py-2 text-green-900 hover:bg-green-900 hover:text-white flex justify-between items-center w-full">Profil</Link>
                         <Link href="/portofolio" className="block px-4 py-2 text-green-900 hover:bg-green-900 hover:text-white flex justify-between items-center w-full">Portofolio</Link>
                         <Link href="/pengalaman-konsultan" className="block px-4 py-2 text-green-900 hover:bg-green-900 hover:text-white flex justify-between items-center w-full">Pengalaman Konsultan</Link>
-                        <Link href="/berita" className="block px-4 py-2 text-green-900 hover:bg-green-900 hover:text-white flex justify-between items-center w-full">Berita</Link>
+                        <Link href="/informasi" className="block px-4 py-2 text-green-900 hover:bg-green-900 hover:text-white flex justify-between items-center w-full">Informasi</Link>
                         <Link href="/hubungi-kami" className="block px-4 py-2 text-green-900 hover:bg-green-900 hover:text-white flex justify-between items-center w-full">Hubungi Kami</Link>
                     </div>
                 </div>
