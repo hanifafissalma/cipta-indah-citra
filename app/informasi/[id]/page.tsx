@@ -45,13 +45,17 @@ const DetailBerita = () => {
     const [slug, setSlug] = useState<string>('')
     const [items, setItems] = useState([])
     const [loading, setLoading] = useState<boolean>(true)
+    const [assets, setAssets] = useState([])
     const options = {
         renderMark: {
           [MARKS.BOLD]: (text: any) => <strong>{text}</strong>,
         },
         renderNode: {
-          [BLOCKS.HEADING_1]: (node: any, children: any) => <h1>{children}</h1>,
-          [BLOCKS.PARAGRAPH]: (node: any, children: any) => <div>{children}</div>,
+          [BLOCKS.HEADING_1]: (node: any, children: any) => <h1 className="text-4xl font-semibold">{children}</h1>,
+          [BLOCKS.HEADING_2]: (node: any, children: any) => <h2 className="text-3xl font-semibold">{children}</h2>,
+          [BLOCKS.HEADING_3]: (node: any, children: any) => <h3 className="text-2xl font-semibold">{children}</h3>,
+          [BLOCKS.HEADING_4]: (node: any, children: any) => <h4 className="text-xl font-semibold">{children}</h4>,
+          [BLOCKS.PARAGRAPH]: (node: any, children: any) => <div className="my-3">{children}</div>,
           [BLOCKS.OL_LIST]: (node: any, children: any) => <ol>{children}</ol>, // Ordered list
           [BLOCKS.UL_LIST]: (node: any, children: any) => <ul>{children}</ul>, // Unordered list
           [BLOCKS.LIST_ITEM]: (node: any, children: any) => <li>{children}</li>,
@@ -78,6 +82,7 @@ const DetailBerita = () => {
             )
                 const data = await res.json()
                 setItems(data.items)
+                setAssets(data.includes?.Asset)
             } catch (error) {
                 console.error('Error fetching data:', error)
             } finally {
@@ -98,20 +103,23 @@ const DetailBerita = () => {
             <div className="w-5/6 mx-auto py-16">
                 <div className="text-sm">
                     <span>
-                        <Link href="/berita" className="hover:text-green-900">Berita</Link>
+                        <Link href="/informasi" className="hover:text-green-900">Berita</Link>
                     </span> &gt; {slug}
                 </div>
                 <div className="mt-6">
                     {items?.filter((d: DataItem) => d.fields?.slug === slug).map((item: DataItem, index: number) => {
                         const { title, tanggalPublish, foto, content } = item?.fields
 
-                        const imageUrl = `https://images.ctfassets.net/${process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID}/${foto.sys.id}?w=600&h=350&fm=webp&q=80`;
+                        const asset: any = assets.find(
+                                (asset: any) => asset.sys?.id === foto.sys.id
+                            );
+                        const imageUrl = `https:${asset?.fields?.file?.url}` || ''
 
                         return (
                             <div key={index} className="w-full">
                                 
                                 <div className="p-4">
-                                    <h3 className="mb-2 text-3xl text-slate-600 text-md font-semibold">
+                                    <h3 className="mb-2 text-3xl text-md font-bold">
                                         {title}
                                     </h3>
                                     <small className="text-slate-400">
@@ -121,7 +129,15 @@ const DetailBerita = () => {
                                             day: "numeric",
                                         })}
                                     </small>
-                                    <Image src={imageUrl} alt={title} fill />
+                                    <div className="relative h-96 overflow-hidden text-white my-8">
+                                        <Image
+                                            src={imageUrl}
+                                            alt={title}
+                                            fill
+                                            objectFit="cover"
+                                            className="rounded mb-4"
+                                        />
+                                    </div>
                                     <div className="text-black leading-normal text-justify mb-2">
                                         {documentToReactComponents(content, options)}
                                     </div>

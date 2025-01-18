@@ -43,6 +43,7 @@ interface DataItem {
 const Informasi = () => {
     const [items, setItems] = useState([])
     const [loading, setLoading] = useState<boolean>(true)
+    const [assets, setAssets] = useState([])
 
     useEffect(() => {
         const fetchData = async () => {
@@ -57,6 +58,7 @@ const Informasi = () => {
                 }
             )
                 const data = await res.json()
+                setAssets(data.includes?.Asset)
                 setItems(data.items)
             } catch (error) {
                 console.error('Error fetching data:', error)
@@ -67,10 +69,11 @@ const Informasi = () => {
     
         fetchData()
     }, [])
-
+    console.log({items})
     const sortedData = items?.sort(
         (a: DataItem, b: DataItem) => new Date(b.fields.tanggalPublish).getTime() - new Date(a.fields.tanggalPublish).getTime()
     )
+
     return(
         <LayoutDefault>
             <div 
@@ -105,8 +108,10 @@ const Informasi = () => {
 
                             const description =
                                 `${content?.content?.[0]?.content?.[0]?.value.slice(0,100)}...` || "Deskripsi tidak tersedia.";
-
-                            const imageUrl = `https://images.ctfassets.net/${process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID}/${foto.sys.id}?w=600&h=350&fm=webp&q=80`;
+                            const asset: any = assets.find(
+                                (asset: any) => asset.sys?.id === foto.sys.id
+                            );
+                            const imageUrl = `https:${asset?.fields?.file?.url}` || '';
 
                             return (
                                 <Link

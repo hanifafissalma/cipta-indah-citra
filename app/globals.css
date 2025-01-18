@@ -33,6 +33,20 @@ body {
   height: 600px;
 }
 
+ol {
+  padding-left: 20px;
+  list-style: decimal;
+}
+
+ul {
+  padding-left: 20px;
+  list-style: circle;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
 ol.custom-list {
   list-style: none;
 }
