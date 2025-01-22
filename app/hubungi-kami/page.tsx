@@ -1,8 +1,8 @@
 "use client"
 import LayoutDefault from "@/components/LayoutDefault"
-import banner from '@/public/banner.png'
-import { useState } from "react";
 import FadeInUp from "@/components/FadeInUp";
+import { useForm, Controller, SubmitHandler } from "react-hook-form"
+import banner from '@/public/banner.png'
 
 interface FormData {
     name: string;
@@ -11,86 +11,24 @@ interface FormData {
     service: string;
     message: string;
   }
-  
-  interface FormErrors {
-    name?: string;
-    email?: string;
-    phone?: string;
-    message?: string;
-  }
-const HubungiKami = () => {
-    const [formData, setFormData] = useState<FormData>({
-        name: "",
-        email: "",
-        phone: "",
-        service: "Design Arsitektur",
-        message: "",
-      });
-    
-      const [errors, setErrors] = useState<FormErrors>({
-        name: "",
-        email: "",
-        phone: "",
-        message: "",
-      })
-    
-    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-        const { id, value } = e.target;
-        setFormData({
-            ...formData,
-            [id]: value,
-        })
-        const formErrors = validate();
-        setErrors(formErrors)
-    }
-    
-    const validate = () => {
-        const formErrors: FormErrors = {};
-        if (!formData.name) {
-          formErrors.name = "Nama lengkap wajib diisi";
-        }
-        if (!formData.email) {
-          formErrors.email = "Email wajib diisi";
-        } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-          formErrors.email = "Email tidak valid";
-        }
-        if (!formData.phone) {
-          formErrors.phone = "Nomor telepon wajib diisi";
-        } else if (!/^[0-9]{10,12}$/.test(formData.phone)) {
-          formErrors.phone = "Nomor telepon tidak valid";
-        }
-        if (!formData.message) {
-          formErrors.message = "Pesan wajib diisi";
-        }
-        return formErrors;
-    }
-    
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        const formErrors = validate();
-        setErrors(formErrors);
-    
-        if (Object.keys(formErrors).length === 0) {
-            const phoneNumber = "6281410450656";
-            const message = `Hai, saya ${formData.name}, dengan email ${formData.email} dan nomor telepon ${formData.phone}, ingin berkonsultasi terkait ${formData.service}. ${formData.message}`
 
-            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-            window.open(whatsappUrl, "_blank");
-            setFormData({
-                name: "",
-                email: "",
-                phone: "",
-                service: "Design Arsitektur",
-                message: "",
-            });
-        }
-    }
+const HubungiKami = () => {
+      const { handleSubmit, control, formState: {errors} } = useForm<FormData>({
+        defaultValues: {
+            name: "",
+            email: "",
+            phone: "",
+            service: "Design Arsitektur",
+            message: ""
+        },
+      })
+      const onSubmit: SubmitHandler<FormData> = (data) => console.log(data)
 
     return(
         <LayoutDefault>
             <div 
                 style={{ 
-                    background: `url(${banner.src})`,
+                    background: `linear-gradient(to right,rgba(134, 176, 73, 0.8),rgba(202, 255, 212, 0.8)), url(${banner.src})`,
                     height: '40vh',
                     backgroundRepeat: 'no-repeat',
                     backgroundAttachment: 'fixed',
@@ -98,14 +36,14 @@ const HubungiKami = () => {
                     backgroundPosition: 'bottom',
                     position: 'relative',
                 }}
-                className="text-white text-center flex items-center"
+                className="text-black text-center flex items-center"
             >
                 <div className="w-5/6 mx-auto">
                     <FadeInUp>
-                        <h1 className="text-5xl font-bold">Hubungi Kami</h1>
+                        <h1 className="text-5xl font-bold drop-shadow-lg">Hubungi Kami</h1>
                     </FadeInUp>
                     <FadeInUp delay=".4s">
-                        <p className="text-xl mt-4">Kami siap membantu mewujudkan proyek impian Anda</p>
+                        <p className="text-xl mt-4 drop-shadow-lg font-bold">Kami siap membantu mewujudkan proyek impian Anda</p>
                     </FadeInUp>
                 </div>
             </div>
@@ -119,76 +57,100 @@ const HubungiKami = () => {
                             <div>
                                 <form
                                     className="bg-green-50 p-6 rounded shadow"
-                                    onSubmit={handleSubmit}
+                                    onSubmit={handleSubmit(onSubmit)}
                                 >
                                     <div className="mb-4">
                                         <label className="block font-semibold mb-2">Nama Lengkap</label>
-                                        <input
-                                            type="text"
-                                            id="name"
-                                            className="w-full px-4 py-2 border rounded focus:outline-none focus:ring focus:ring-green-300"
-                                            value={formData.name}
-                                            onChange={handleInputChange}
+                                        <Controller
+                                            name="name"
+                                            control={control}
+                                            rules={{ required: 'Nama lengkap wajib diisi' }}
+                                            render={({ field }) => 
+                                                <input
+                                                    {...field}
+                                                    className="w-full px-4 py-2 border rounded focus:outline-none focus:ring focus:ring-green-300"
+                                                />
+                                            }
                                         />
-                                        {errors.name && (
-                                            <p className="text-red-500 text-sm mt-1">{errors.name}</p>
+                                        {errors?.name?.message && (
+                                            <p className="text-red-500 text-sm mt-1">{errors?.name?.message}</p>
                                         )}
                                     </div>
 
                                     <div className="mb-4">
                                         <label className="block font-semibold mb-2">Email</label>
-                                        <input
-                                            type="email"
-                                            id="email"
-                                            className="w-full px-4 py-2 border rounded focus:outline-none focus:ring focus:ring-green-300"
-                                            value={formData.email}
-                                            onChange={handleInputChange}
+                                        <Controller
+                                            name="email"
+                                            control={control}
+                                            rules={{ required: 'Email wajib diisi' }}
+                                            render={({ field }) => 
+                                                <input
+                                                    {...field}
+                                                    type="email"
+                                                    className="w-full px-4 py-2 border rounded focus:outline-none focus:ring focus:ring-green-300"
+                                                />
+                                            }
                                         />
-                                        {errors.email && (
-                                            <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+                                        {errors?.email?.message && (
+                                            <p className="text-red-500 text-sm mt-1">{errors?.email?.message}</p>
                                         )}
                                     </div>
 
                                     <div className="mb-4">
                                         <label className="block font-semibold mb-2">Nomor Telepon</label>
-                                        <input
-                                            type="tel"
-                                            id="phone"
-                                            className="w-full px-4 py-2 border rounded focus:outline-none focus:ring focus:ring-green-300"
-                                            value={formData.phone}
-                                            onChange={handleInputChange}
+                                        <Controller
+                                            name="phone"
+                                            control={control}
+                                            rules={{ required: 'Nomor telepon wajib diisi' }}
+                                            render={({ field }) => 
+                                                <input
+                                                    {...field}
+                                                    type="tel"
+                                                    className="w-full px-4 py-2 border rounded focus:outline-none focus:ring focus:ring-green-300"
+                                                />
+                                            }
                                         />
-                                        {errors.phone && (
-                                            <p className="text-red-500 text-sm mt-1">{errors.phone}</p>
+                                        {errors?.phone?.message && (
+                                            <p className="text-red-500 text-sm mt-1">{errors?.phone?.message}</p>
                                         )}
                                     </div>
 
                                     <div className="mb-4">
                                         <label className="block font-semibold mb-2">Pilih Layanan</label>
-                                        <select
-                                            id="service"
-                                            className="w-full px-4 py-2 border rounded focus:outline-none focus:ring focus:ring-green-300"
-                                            value={formData.service}
-                                            onChange={handleInputChange}
-                                        >
-                                            <option value="">--Pilih Layanan--</option>
-                                            <option value="Design Arsitektur">Design Arsitektur</option>
-                                            <option value="Manajemen Konstruksi">Manajemen Konstruksi</option>
-                                            <option value="Sertifikat Laik Fungsi">Sertifikat Laik Fungsi</option>
-                                        </select>
+                                        <Controller
+                                            name="service"
+                                            control={control}
+                                            rules={{ required: true }}
+                                            render={({ field }) => 
+                                                <select
+                                                    {...field}
+                                                    className="w-full px-4 py-2 border rounded focus:outline-none focus:ring focus:ring-green-300"
+                                                >
+                                                    <option value="">--Pilih Layanan--</option>
+                                                    <option value="Design Arsitektur">Design Arsitektur</option>
+                                                    <option value="Manajemen Konstruksi">Manajemen Konstruksi</option>
+                                                    <option value="Sertifikat Laik Fungsi">Sertifikat Laik Fungsi</option>
+                                                </select>
+                                            }
+                                        />
                                     </div>
 
                                     <div className="mb-4">
                                         <label className="block font-semibold mb-2">Pesan</label>
-                                        <textarea
-                                            id="message"
-                                            rows={4}
-                                            className="w-full px-4 py-2 border rounded focus:outline-none focus:ring focus:ring-green-300"
-                                            value={formData.message}
-                                            onChange={handleInputChange}
+                                        <Controller
+                                            name="message"
+                                            control={control}
+                                            rules={{ required: 'Pesan wajib diisi' }}
+                                            render={({ field }) => 
+                                                <textarea
+                                                    {...field}
+                                                    rows={4}
+                                                    className="w-full px-4 py-2 border rounded focus:outline-none focus:ring focus:ring-green-300"
+                                                />
+                                            }
                                         />
-                                        {errors.message && (
-                                            <p className="text-red-500 text-sm mt-1">{errors.message}</p>
+                                        {errors?.message?.message && (
+                                            <p className="text-red-500 text-sm mt-1">{errors?.message?.message}</p>
                                         )}
                                     </div>
 
@@ -207,9 +169,15 @@ const HubungiKami = () => {
                                 <table>
                                     <tbody>
                                         <tr>
-                                            <td valign="top" style={{width: '20%'}}>Alamat</td>
+                                            <td valign="top" style={{width: '20%'}}>Lokasi Kantor</td>
                                             <td valign="top" style={{width: '10%'}}>:</td>
-                                            <td valign="top">Gg. Mekar No.8, Akcaya, Kec. Pontianak Sel.,Kota Pontianak, Kalimantan Barat 78113</td>
+                                            <td valign="top">
+                                                <b>Jakarta</b>
+                                                <div>Jalan</div>
+                                                <br/>
+                                                <b>Kalimantan Barat</b>
+                                                <div>Gg. Mekar No.8, Akcaya, Kec. Pontianak Sel., Kota Pontianak, <br/>Kalimantan Barat 78113</div>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td valign="top">Email</td>
@@ -223,14 +191,14 @@ const HubungiKami = () => {
                                         </tr>
                                     </tbody>
                                 </table>
-                                <iframe
+                                {/* <iframe
                                     src="https://maps.google.com/maps?width=600&amp;height=200&amp;hl=en&amp;q=Gg. Mekar No.8, Akcaya, Kec. Pontianak Sel.,Kota Pontianak&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
                                     width="100%" 
                                     height="100%" 
                                     allowFullScreen 
                                     loading="lazy" 
                                     className="mt-8"
-                                />
+                                /> */}
                             </div>            
                         </FadeInUp>
                     </div>

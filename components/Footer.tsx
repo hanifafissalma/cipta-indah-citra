@@ -8,7 +8,7 @@ const Footer = () => {
     return(
         <footer className="bg-green-50">
             <div className="flex mx-auto justify-between w-5/6 py-12">
-                <div className="grid md:grid-cols-2 sm:grid-cols-2 lg:grid-cols-6 flex items-center gap-8">
+                <div className="grid md:grid-cols-2 sm:grid-cols-2 lg:grid-cols-6 flex gap-8">
                     <div className="col-span-2">
                         <div className="flex items-start gap-2">
                             <div>
@@ -76,8 +76,13 @@ const Footer = () => {
                             <span className="material-symbols-outlined text-green-900">
                                 location_on
                             </span>
-                            <span className="ml-2 text-sm">Gg. Mekar No.8, Akcaya, Kec. Pontianak Sel.,<br/>
-                            Kota Pontianak, Kalimantan Barat 78113</span>
+                            <span className="ml-2 text-sm">
+                                <b>Jakarta</b>
+                                <div>Jalan</div>
+                                <br/>
+                                <b>Kalimantan Barat</b>
+                                <div>Gg. Mekar No.8, Akcaya, Kec. Pontianak Sel., Kota Pontianak, Kalimantan Barat 78113</div>
+                            </span>
                         </div>
                     </div>
                 </div>

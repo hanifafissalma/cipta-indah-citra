@@ -14,7 +14,7 @@ const HalamanUtama = () => {
         <LayoutDefault>
             <div 
                 style={{ 
-                    background: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ),url(${carousel2.src})`,
+                    background: `linear-gradient(to right,rgba(134, 176, 73, 0.8),rgba(202, 255, 212, 0.8)),url(${carousel2.src})`,
                     height: '100vh',
                     backgroundRepeat: 'no-repeat',
                     backgroundAttachment: 'fixed',
@@ -26,10 +26,10 @@ const HalamanUtama = () => {
             >
                 <div className="w-5/6 mx-auto">
                     <FadeInUp>
-                        <div className="text-5xl text-white drop-shadow-lg font-bold mb-2">Sejak 2009</div>
+                        <div className="text-5xl text-black drop-shadow-xl font-bold mb-2">Sejak 2009</div>
                     </FadeInUp>
                     <FadeInUp delay=".4s">
-                        <div className="text-2xl text-white drop-shadow-md font-semibold mb-4 lg:w-3/4 sm:w-full">
+                        <div className="text-2xl text-black drop-shadow-xl font-semibold mb-4 lg:w-3/4 sm:w-full">
                             Berpengalaman mewujudkan design berkualitas tinggi
                             dengan keahlian dan inovasi yang menjadi solusi
                             arsitektur terbaik untuk Anda.

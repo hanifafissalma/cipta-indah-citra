@@ -114,7 +114,7 @@ const Portofolio = () => {
         <LayoutDefault>
             <div 
                 style={{ 
-                    background: `url(${banner.src})`,
+                    background: `linear-gradient(to right,rgba(134, 176, 73, 0.8),rgba(202, 255, 212, 0.8)), url(${banner.src})`,
                     height: '40vh',
                     backgroundRepeat: 'no-repeat',
                     backgroundAttachment: 'fixed',
@@ -122,14 +122,14 @@ const Portofolio = () => {
                     backgroundPosition: 'bottom',
                     position: 'relative',
                 }}
-                className="text-white text-center flex items-center"
+                className="text-black text-center flex items-center"
             >
                 <div className="w-5/6 mx-auto">
                     <FadeInUp>
-                        <h1 className="text-4xl font-bold">Jejak Karya</h1>
+                        <h1 className="text-4xl font-bold drop-shadow-lg">Jejak Karya</h1>
                     </FadeInUp>
                     <FadeInUp delay=".4s">
-                        <p className="text-xl mt-4 md:w-full lg:w-2/3 mx-auto">
+                        <p className="text-xl mt-4 md:w-full lg:w-2/3 mx-auto font-bold drop-shadow-lg">
                             Hasilkan Lebih dari Sekadar Visual – Ciptakan Pengalaman
                         </p>
                     </FadeInUp>
