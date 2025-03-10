@@ -82,7 +82,7 @@ const ManajemenKonstruksi = () => {
                             </div>
                             <div className="px-4 pb-4 pt-0 mt-2 flex justify-end">
                                 <Link
-                                    href={`https://wa.me/6282125660808?text=${encodeURIComponent(`Halo,saya mau konsultasi dengan PT Cipta Indah Citra`)}`}
+                                    href={`https://wa.me/6282125560808?text=${encodeURIComponent(`Halo,saya mau konsultasi dengan PT Cipta Indah Citra`)}`}
                                     className="font-semibold bg-customYellow text-white py-2 px-6 flex items-center justify-center border-customYellow rounded border hover:shadow-lg"
                                 >
                                     Konsultasi Sekarang
@@ -111,7 +111,7 @@ const ManajemenKonstruksi = () => {
                                 </div>
                                 <div className="px-4 pb-4 pt-0 mt-2 flex justify-end">
                                     <Link
-                                        href={`https://wa.me/6282125660808?text=${encodeURIComponent(`Halo,saya mau konsultasi dengan PT Cipta Indah Citra`)}`}
+                                        href={`https://wa.me/6282125560808?text=${encodeURIComponent(`Halo,saya mau konsultasi dengan PT Cipta Indah Citra`)}`}
                                         className="font-semibold bg-customYellow text-white py-2 px-6 flex items-center justify-center border-customYellow rounded border hover:shadow-lg"
                                     >
                                         Konsultasi Sekarang
@@ -165,7 +165,7 @@ const ManajemenKonstruksi = () => {
                             </ol>
                             <center>
                                 <Link 
-                                    href={`https://wa.me/6282125660808?text=${encodeURIComponent(`Halo,saya mau konsultasi dengan PT Cipta Indah Citra`)}`}
+                                    href={`https://wa.me/6282125560808?text=${encodeURIComponent(`Halo,saya mau konsultasi dengan PT Cipta Indah Citra`)}`}
                                     className="mt-16 font-semibold font-semibold bg-customYellow text-white lg:w-2/3 sm:w-full py-2 flex items-center justify-center border-customYellow rounded border hover:shadow-lg"
                                 >
                                     Konsultasi Sekarang

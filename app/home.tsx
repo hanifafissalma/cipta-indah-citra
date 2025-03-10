@@ -37,7 +37,7 @@ const HalamanUtama = () => {
                     </FadeInUp>
                     <FadeInUp delay=".8s">
                         <Link 
-                            href={`https://wa.me/6282125660808?text=${encodeURIComponent(`Halo,saya mau konsultasi dengan PT Cipta Indah Citra`)}`}
+                            href={`https://wa.me/6282125560808?text=${encodeURIComponent(`Halo,saya mau konsultasi dengan PT Cipta Indah Citra`)}`}
                             className="font-semibold bg-customYellow text-white lg:w-2/6 sm:w-full py-2 flex items-center justify-center border-customYellow rounded border hover:shadow-lg"
                         >
                             Konsultasi Sekarang
@@ -74,7 +74,7 @@ const HalamanUtama = () => {
                     <br/><br/>
                     <FadeInUp delay=".8s">
                         <Link 
-                            href={`https://wa.me/6282125660808?text=${encodeURIComponent(`Halo,saya mau konsultasi dengan PT Cipta Indah Citra`)}`}
+                            href={`https://wa.me/6282125560808?text=${encodeURIComponent(`Halo,saya mau konsultasi dengan PT Cipta Indah Citra`)}`}
                             className="font-semibold bg-customYellow text-white py-2 flex items-center justify-center border-customYellow rounded border hover:shadow-lg"
                         >
                             Konsultasi Sekarang
@@ -231,7 +231,7 @@ const HalamanUtama = () => {
                     <FadeInUp delay="2s">
                         <center>
                             <Link 
-                                href={`https://wa.me/6282125660808?text=${encodeURIComponent(`Halo,saya mau konsultasi dengan PT Cipta Indah Citra`)}`}
+                                href={`https://wa.me/6282125560808?text=${encodeURIComponent(`Halo,saya mau konsultasi dengan PT Cipta Indah Citra`)}`}
                                 className="mt-16 font-semibold font-semibold bg-customYellow text-white lg:w-2/3 sm:w-full py-2 flex items-center justify-center border-customYellow rounded border hover:shadow-lg"
                             >
                                 Konsultasi Sekarang
@@ -249,7 +249,7 @@ const HalamanUtama = () => {
                         <div className="flex flex-col">
                             <FadeInUp delay=".4s">
                                 <Link 
-                                    href={`https://wa.me/6282125660808?text=${encodeURIComponent(`Halo,saya mau konsultasi dengan PT Cipta Indah Citra`)}`}
+                                    href={`https://wa.me/6282125560808?text=${encodeURIComponent(`Halo,saya mau konsultasi dengan PT Cipta Indah Citra`)}`}
                                     className="border border-green-900 bg-white rounded py-2 mb-2 lg:w-5/6 sm:w-full flex items-center justify-center text-green-900 hover:bg-green-900 hover:text-white"
                                 >
                                     <Whatsapp /><span className="ml-2">Konsultasi via WhatsApp</span>
@@ -257,7 +257,7 @@ const HalamanUtama = () => {
                             </FadeInUp>
                             <FadeInUp delay=".8s">
                                 <Link 
-                                    href="tel:6282125660808" 
+                                    href="tel:6282125560808" 
                                     className="border border-green-900 bg-white rounded py-2 mb-2 lg:w-5/6 sm:w-full flex items-center justify-center text-green-900 hover:bg-green-900 hover:text-white"
                                 >
                                     <span className="material-symbols-outlined">
