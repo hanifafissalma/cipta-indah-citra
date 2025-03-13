@@ -3,6 +3,7 @@ import { Karla } from "next/font/google";
 import "./globals.css";
 import "./globalicon.css";
 import { favicons, siteConfig } from '@/configs/siteconfig'
+import Head from 'next/head'
 
 
 const karla = Karla({ subsets: ["latin"] });
@@ -39,7 +40,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
+      <Head>
+        <title>Jasa Arsitektur, Konstruksi dan SLF | Cipta Indah Citra</title>
+        <meta name="description" content="Cipta Indah Citra menyediakan jasa desain arsitektur, manajemen konstruksi, dan sertifikasi laik fungsi dengan layanan terbaik untuk rumah, gedung, dan proyek komersial." />
+        <meta name="keywords" content="jasa desain arsitektur, jasa manajemen konstruksi, sertifikasi laik fungsi, arsitek profesional, konsultan konstruksi, jasa desain arsitektur rumah, jasa desain rumah modern, " />
+        <meta name="author" content="Cipta Indah Citra" />
+        <meta property="og:title" content="Jasa Arsitektur & Konstruksi | Cipta Indah Citra" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ciptaindahcitra.com" />
+        <meta property="og:image" content="https://ciptaindahcitra.com/logo.png" />
         {/* Favicons */}
         {favicons.map((linkProps) => (
           <link key={linkProps.href} {...linkProps} />
@@ -66,7 +75,7 @@ export default function RootLayout({
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
         />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=optional" />
-      </head>
+      </Head>
       <body className={`bg-white text-md text-black ${karla.className}`} >
         {children}
       </body>

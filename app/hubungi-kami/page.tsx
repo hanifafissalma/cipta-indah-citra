@@ -172,9 +172,9 @@ const HubungiKami = () => {
                                             <td valign="top" style={{width: '20%'}}>Lokasi Kantor</td>
                                             <td valign="top" style={{width: '10%'}}>:</td>
                                             <td valign="top">
-                                                <b>Jakarta</b>
+                                                {/* <b>Jakarta</b>
                                                 <div>Jalan</div>
-                                                <br/>
+                                                <br/> */}
                                                 <b>Kalimantan Barat</b>
                                                 <div>Gg. Mekar No.8, Akcaya, Kec. Pontianak Sel., Kota Pontianak, <br/>Kalimantan Barat 78113</div>
                                             </td>

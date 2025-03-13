@@ -28,16 +28,25 @@ export interface SiteConfig {
     sizes?: string
     type?: string
   }
-  
+
+  const keywords = `
+    jasa desain arsitektur, jasa manajemen konstruksi, sertifikasi laik fungsi, arsitek profesional, konsultan konstruksi, 
+    jasa desain arsitektur rumah, jasa desain rumah modern, jasa desain rumah minimalis, 
+    desain rumah klasik, jasa desain bangunan komersial, arsitek terbaik di Kalimantan, jasa arsitek rumah mewah,
+    jasa manajemen konstruksi gedung, konsultan manajemen proyek, kontraktor proyek konstruksi, 
+    jasa manajemen proyek bangunan, jasa perencanaan konstruksi, jasa pengawasan konstruksi,
+    jasa sertifikasi laik fungsi gedung, cara mengurus sertifikat laik fungsi, biaya sertifikat laik fungsi, 
+    konsultan sertifikasi laik fungsi, syarat mendapatkan SLF
+  `
   export const siteConfig: SiteConfig = {
-    title: 'PT. Cipta Indah Citra',
+    title: 'Jasa Arsitektur, Konstruksi dan SLF | Cipta Indah Citra',
     siteName: 'PT. Cipta Indah Citra',
-    description: 'PT. Cipta Indah Citra',
+    description: 'Cipta Indah Citra menyediakan jasa desain arsitektur, manajemen konstruksi, dan sertifikasi laik fungsi dengan layanan terbaik untuk rumah, gedung, dan proyek komersial.',
     url: process.env.NEXT_PUBLIC_BASE_URL,
     type: 'website',
     robots: 'follow, index',
     image: `${process.env.NEXT_PUBLIC_BASE_URL}/logo.png`,
-    keywords: 'PT. Cipta Indah Citra',
+    keywords: keywords,
     author: 'PT. Cipta Indah Citra',
   }
   

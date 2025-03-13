@@ -77,9 +77,9 @@ const Footer = () => {
                                 location_on
                             </span>
                             <span className="ml-2 text-sm">
-                                <b>Jakarta</b>
+                                {/* <b>Jakarta</b>
                                 <div>Jalan</div>
-                                <br/>
+                                <br/> */}
                                 <b>Kalimantan Barat</b>
                                 <div>Gg. Mekar No.8, Akcaya, Kec. Pontianak Sel., Kota Pontianak, Kalimantan Barat 78113</div>
                             </span>
