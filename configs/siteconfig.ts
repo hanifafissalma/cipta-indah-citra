@@ -35,7 +35,7 @@ export interface SiteConfig {
     desain rumah klasik, jasa desain bangunan komersial, arsitek terbaik di Kalimantan, jasa arsitek rumah mewah,
     jasa manajemen konstruksi gedung, konsultan manajemen proyek, kontraktor proyek konstruksi, 
     jasa manajemen proyek bangunan, jasa perencanaan konstruksi, jasa pengawasan konstruksi,
-    jasa sertifikasi laik fungsi gedung, cara mengurus sertifikat laik fungsi, biaya sertifikat laik fungsi, 
+    jasa sertifikasi laik fungsi gedung, cara mengurus sertifikasi laik fungsi, biaya sertifikasi laik fungsi, 
     konsultan sertifikasi laik fungsi, syarat mendapatkan SLF
   `
   export const siteConfig: SiteConfig = {
@@ -54,19 +54,19 @@ export interface SiteConfig {
     {
       rel: 'apple-touch-icon',
       sizes: '180x180',
-      href: '/logo_180.png',
+      href: './logo_180.png',
     },
     {
       rel: 'icon',
       type: 'image/png',
       sizes: '192x192',
-      href: '/logo_192.png',
+      href: './logo_192.png',
     },
     {
       rel: 'icon',
       type: 'image/png',
       sizes: '32x32',
-      href: '/logo_32.png',
+      href: './logo_32.png',
     },
   ]
   

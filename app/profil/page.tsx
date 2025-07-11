@@ -26,7 +26,7 @@ const Profil = () => {
                         <p className="text-xl mt-4 md:w-full lg:w-2/3 mx-auto font-bold drop-shadow-lg">
                             Perusahaan konsultan yang bergerak dibidang Design Arsitektur, 
                             Manajemen Konstruksi (MK), dan Pengkaji Teknis Pemeriksaan Syarat 
-                            Sertifikat Laik Fungsi (SLF)
+                            Sertifikasi Laik Fungsi (SLF)
                         </p>
                     </FadeInUp>
                 </div>
@@ -43,7 +43,7 @@ const Profil = () => {
                             <p>
                                 Konsultan Total Layanan mulai dari Design Gedung, 
                                 Manajemen Konstruksi (MK) hingga Pengkaji Teknis / 
-                                Pemeriksaan Syarat Sertifikat Laik Fungsi (SLF)
+                                Pemeriksaan Syarat Sertifikasi Laik Fungsi (SLF)
                             </p>
                         </FadeInUp>
                         <FadeInUp>
@@ -73,12 +73,12 @@ const Profil = () => {
                                 </li>
                                 <li>
                                     Konsultan Manajemen Konstruksi (MK) mampu menjaga mutu, volume/quantity & 
-                                    waktu & review sampai mengeluarkan rekomendasi untuk mengeluarkan Sertifikat 
+                                    waktu & review sampai mengeluarkan rekomendasi untuk mengeluarkan Sertifikasi 
                                     Laik Fungsi (SLF) apabila gedung sudah selesai & dioperasikan.
                                 </li>
                                 <li>
                                     Pengkaji Teknis ber-SKA : Arsitek, Struktur, Mekanikal, Elektrikal & Teknik Lingkungan 
-                                    untuk memeriksa syarat/ketentuan memperoleh: Sertifikat Laik Fungsi (SLF) Gedung bagi 
+                                    untuk memeriksa syarat/ketentuan memperoleh: Sertifikasi Laik Fungsi (SLF) Gedung bagi 
                                     gedung yang sudah ada/lama berdiri.
                                 </li>
                             </ol>

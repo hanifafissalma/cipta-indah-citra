@@ -21,7 +21,7 @@ const Footer = () => {
                             </div>
                             <div>
                                 <div className="text-md font-bold">PT CIPTA INDAH CITRA</div>
-                                <div className="text-xs">Design Arsitektur, Manajemen Konstruksi (MK) & Pengkaji Sertifikat Laik Fungsi (SLF)</div>
+                                <div className="text-xs">Design Arsitektur, Manajemen Konstruksi (MK) & Sertifikasi Laik Fungsi (SLF)</div>
                                 <div className="text-xs">Arsitektur, Struktur, Mekanikal, Elektrikal & Teknik Lingkungan</div>
                                 <div className="flex flex-row gap-3 mt-2">
                                     <Link href="#"><Facebook/></Link>
@@ -40,7 +40,7 @@ const Footer = () => {
                             <Link href="/manajemen-konstruksi" className="hover:text-green-900 text-sm">Manajemen Konstruksi</Link>
                         </div>
                         <div className="mb-1">
-                            <Link href="/sertifikat-laik-fungsi" className="hover:text-green-900 text-sm">Sertifikat Laik Fungsi</Link>
+                            <Link href="/sertifikasi-laik-fungsi" className="hover:text-green-900 text-sm">Sertifikasi Laik Fungsi</Link>
                         </div>
                     </div>
                     <div>

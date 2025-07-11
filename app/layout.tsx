@@ -2,8 +2,7 @@
 import { Karla } from "next/font/google";
 import "./globals.css";
 import "./globalicon.css";
-import { favicons, siteConfig } from '@/configs/siteconfig'
-import Head from 'next/head'
+import { siteConfig } from '@/configs/siteconfig'
 
 
 const karla = Karla({ subsets: ["latin"] });
@@ -40,7 +39,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
+      <head>
         <title>Jasa Arsitektur, Konstruksi dan SLF | Cipta Indah Citra</title>
         <meta name="description" content="Cipta Indah Citra menyediakan jasa desain arsitektur, manajemen konstruksi, dan sertifikasi laik fungsi dengan layanan terbaik untuk rumah, gedung, dan proyek komersial." />
         <meta name="keywords" content="jasa desain arsitektur, jasa manajemen konstruksi, sertifikasi laik fungsi, arsitek profesional, konsultan konstruksi, jasa desain arsitektur rumah, jasa desain rumah modern, " />
@@ -49,14 +48,14 @@ export default function RootLayout({
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ciptaindahcitra.com" />
         <meta property="og:image" content="https://ciptaindahcitra.com/logo.png" />
-        {/* Favicons */}
-        {favicons.map((linkProps) => (
-          <link key={linkProps.href} {...linkProps} />
-        ))}
+
+        <link href="/logo_32.png" rel="icon" type="image/png" sizes="32x32"/>
+        <link href="/logo_192.png" rel="icon" type="image/png" sizes="192x192"/>
+        <link href="/logo_180.png" rel="apple-touch-icon" type="image/png" sizes="180x180"/>
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta
           name="msapplication-TileImage"
-          content="/logo_180.png"
+          content="./logo_180.png"
         />
         <meta
           httpEquiv="Content-Security-Policy"
@@ -75,7 +74,7 @@ export default function RootLayout({
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
         />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=optional" />
-      </Head>
+      </head>
       <body className={`bg-white text-md text-black ${karla.className}`} >
         {children}
       </body>

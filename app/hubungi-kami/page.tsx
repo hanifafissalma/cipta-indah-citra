@@ -3,6 +3,7 @@ import LayoutDefault from "@/components/LayoutDefault"
 import FadeInUp from "@/components/FadeInUp";
 import { useForm, Controller, SubmitHandler } from "react-hook-form"
 import banner from '@/public/banner.png'
+import { useEffect, useState } from "react";
 
 interface FormData {
     name: string;
@@ -13,7 +14,7 @@ interface FormData {
   }
 
 const HubungiKami = () => {
-      const { handleSubmit, control, formState: {errors} } = useForm<FormData>({
+    const { handleSubmit, control, formState: {errors} } = useForm<FormData>({
         defaultValues: {
             name: "",
             email: "",
@@ -21,9 +22,47 @@ const HubungiKami = () => {
             service: "Design Arsitektur",
             message: ""
         },
-      })
-      const onSubmit: SubmitHandler<FormData> = (data) => console.log(data)
+    })
+    const [items, setItems] = useState([])
+    const onSubmit: SubmitHandler<FormData> = (data) => {
+        const message = `
+        Halo! Saya ingin menghubungi mengenai layanan berikut:
 
+        *Nama:* ${data.name}
+        *Email:* ${data.email}
+        *Telepon:* ${data.phone}
+        *Layanan:* ${data.service}
+        *Pesan:* ${data.message}
+        `;
+
+        const encodedMessage = encodeURIComponent(message);
+        const phoneNumber = "6282125660808";
+
+        const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+        window.open(whatsappURL, "_blank");
+    };
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const res = await fetch(
+                `https://cdn.contentful.com/spaces/${process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID}/environments/master/entries?content_type=alamatKantor`,
+                {
+                    headers: {
+                    Authorization: `Bearer ${process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN}`,
+                    },
+                }
+                )
+                const data = await res.json()
+                setItems(data.items)
+            } catch (error) {
+                console.error('Error fetching data:', error)
+            }
+        }
+    
+        fetchData()
+    }, [])
+    console.log({items})
     return(
         <LayoutDefault>
             <div 
@@ -127,9 +166,9 @@ const HubungiKami = () => {
                                                     className="w-full px-4 py-2 border rounded focus:outline-none focus:ring focus:ring-green-300"
                                                 >
                                                     <option value="">--Pilih Layanan--</option>
-                                                    <option value="Design Arsitektur">Design Arsitektur</option>
-                                                    <option value="Manajemen Konstruksi">Manajemen Konstruksi</option>
-                                                    <option value="Sertifikat Laik Fungsi">Sertifikat Laik Fungsi</option>
+                                                    <option value="Design Arsitektur">1. Design Arsitektur</option>
+                                                    <option value="Manajemen Konstruksi">2. Manajemen Konstruksi (MK)</option>
+                                                    <option value="Sertifikasi Laik Fungsi">3. Sertifikasi Laik Fungsi (SLF)</option>
                                                 </select>
                                             }
                                         />
@@ -172,11 +211,13 @@ const HubungiKami = () => {
                                             <td valign="top" style={{width: '20%'}}>Lokasi Kantor</td>
                                             <td valign="top" style={{width: '10%'}}>:</td>
                                             <td valign="top">
-                                                {/* <b>Jakarta</b>
-                                                <div>Jalan</div>
-                                                <br/> */}
-                                                <b>Kalimantan Barat</b>
-                                                <div>Gg. Mekar No.8, Akcaya, Kec. Pontianak Sel., Kota Pontianak, <br/>Kalimantan Barat 78113</div>
+                                                {items.map((data: {fields: {lokasi: string, alamat: string}}, index: number) => (
+                                                    <div key={index}>
+                                                        <b>{data.fields.lokasi}</b>
+                                                        <div>{data.fields.alamat}</div>
+                                                    </div>
+                                                ))}
+                                                
                                             </td>
                                         </tr>
                                         <tr>

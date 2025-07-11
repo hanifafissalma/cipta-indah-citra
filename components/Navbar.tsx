@@ -11,9 +11,9 @@ const Navbar = () => {
     const pathname = usePathname()
     return(
         <nav className="fixed top-0 z-50 bg-white w-full">
-            <div className="max-w-7xl mx-auto shadow-sm">
+            <div className="max-w-8xl mx-auto shadow-sm">
                 <div className="flex mx-auto justify-between w-5/6 ">
-                    <div className="flex items-center gap-16 h-[80px]">
+                    <div className="flex items-center gap-8 h-[100px]">
                         <div>
                             <Link
                                 href="/"
@@ -22,8 +22,8 @@ const Navbar = () => {
                                 <Image 
                                     src="/logo_landscape.png"
                                     alt="logo_landscape"
-                                    width={200}
-                                    height={30}
+                                    width={360}
+                                    height={100}
                                 />
                             </Link>
                         </div>
@@ -34,7 +34,7 @@ const Navbar = () => {
                                 <Link
                                     href="#"
                                     onClick={() => setShowSubMenu(!showSubMenu)}
-                                    className={`hover:bg-green-900 hover:text-white text-center transition-colors duration-300 flex items-center justify-center h-full px-4 font-semibold ${pathname === '/design-arsitektur' || pathname === '/manajemen-konstruksi' || pathname === '/sertifikat-laik-fungsi' ? 'bg-green-900 text-white' : 'text-green-900 bg-white'}`}
+                                    className={`hover:bg-green-900 hover:text-white text-center transition-colors duration-300 flex items-center justify-center h-full px-4 font-semibold ${pathname === '/design-arsitektur' || pathname === '/manajemen-konstruksi' || pathname === '/sertifikasi-laik-fungsi' ? 'bg-green-900 text-white' : 'text-green-900 bg-white'}`}
                                 >
                                     Layanan 
                                     <span className="ml-2">
@@ -47,7 +47,7 @@ const Navbar = () => {
                                 </Link>
                                 {/* Submenu */}
                                 <div
-                                    className={`absolute left-0 mt-2 bg-white shadow-lg border rounded-md transition-opacity duration-300 ${
+                                    className={`absolute w-[250px] left-0 mt-2 bg-white shadow-lg border rounded-md transition-opacity duration-300 ${
                                         showSubMenu ? "opacity-100 visible" : "opacity-0 invisible"
                                     }`}
                                 >
@@ -55,19 +55,19 @@ const Navbar = () => {
                                         href="/design-arsitektur"
                                         className="block px-4 py-2 text-green-900 hover:bg-green-900 hover:text-white"
                                     >
-                                        Design Arsitektur
+                                        1. Design Arsitektur
                                     </Link>
                                     <Link
                                         href="/manajemen-konstruksi"
                                         className="block px-4 py-2 text-green-900 hover:bg-green-900 hover:text-white"
                                     >
-                                        Manajemen Konstruksi
+                                        2. Manajemen Konstruksi
                                     </Link>
                                     <Link
-                                        href="/sertifikat-laik-fungsi"
+                                        href="/sertifikasi-laik-fungsi"
                                         className="block px-4 py-2 text-green-900 hover:bg-green-900 hover:text-white"
                                     >
-                                        Sertifikat Laik Fungsi
+                                        3. Sertifikasi Laik Fungsi
                                     </Link>
                                 </div>
                                 </div>
@@ -137,19 +137,19 @@ const Navbar = () => {
                                         href="/design-arsitektur"
                                         className="block px-4 py-2 text-green-900 hover:bg-green-900 hover:text-white"
                                     >
-                                        Design Arsitektur
+                                        1. Design Arsitektur
                                     </Link>
                                     <Link
                                         href="/manajemen-konstruksi"
                                         className="block px-4 py-2 text-green-900 hover:bg-green-900 hover:text-white"
                                     >
-                                        Manajemen Konstruksi
+                                        2. Manajemen Konstruksi
                                     </Link>
                                     <Link
-                                        href="/sertifikat-laik-fungsi"
+                                        href="/sertifikasi-laik-fungsi"
                                         className="block px-4 py-2 text-green-900 hover:bg-green-900 hover:text-white"
                                     >
-                                        Sertifikat Laik Fungsi
+                                        3. Sertifikasi Laik Fungsi
                                     </Link>
                                 </div>
                             )}

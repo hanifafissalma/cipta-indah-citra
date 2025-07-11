@@ -38,6 +38,7 @@ const HalamanUtama = () => {
                     <FadeInUp delay=".8s">
                         <Link 
                             href={`https://wa.me/6282125560808?text=${encodeURIComponent(`Halo,saya mau konsultasi dengan PT Cipta Indah Citra`)}`}
+                            target="_blank"
                             className="font-semibold bg-customYellow text-white lg:w-2/6 sm:w-full py-2 flex items-center justify-center border-customYellow rounded border hover:shadow-lg"
                         >
                             Konsultasi Sekarang
@@ -75,6 +76,7 @@ const HalamanUtama = () => {
                     <FadeInUp delay=".8s">
                         <Link 
                             href={`https://wa.me/6282125560808?text=${encodeURIComponent(`Halo,saya mau konsultasi dengan PT Cipta Indah Citra`)}`}
+                            target="_blank"
                             className="font-semibold bg-customYellow text-white py-2 flex items-center justify-center border-customYellow rounded border hover:shadow-lg"
                         >
                             Konsultasi Sekarang
@@ -151,14 +153,14 @@ const HalamanUtama = () => {
                                 </div>
                                 <div className="p-4">
                                     <h6 className="mb-2 text-slate-600 text-xl font-semibold">
-                                        Sertifikat Laik Fungsi
+                                        Sertifikasi Laik Fungsi
                                     </h6>
                                     <p className="text-slate-600 leading-normal font-light text-justify">
-                                        Jasa sertifikat sebagai syarat gedung sebelum dioperasikan atau untuk persyaratan akreditasi
+                                        Jasa sertifikasi sebagai syarat gedung sebelum dioperasikan atau untuk persyaratan akreditasi
                                     </p>
                                 </div>
                                 <div className="px-4 pb-4 pt-0 mt-2 flex justify-end">
-                                    <Link href="/sertifikat-laik-fungsi" className="rounded-md bg-white py-2 px-4 border border-green-900 text-center text-sm text-green-900 transition-all shadow-md hover:shadow-lg focus:bg-green-700 focus:shadow-none active:bg-green-900 hover:bg-green-900 hover:text-white active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                                    <Link href="/sertifikasi-laik-fungsi" className="rounded-md bg-white py-2 px-4 border border-green-900 text-center text-sm text-green-900 transition-all shadow-md hover:shadow-lg focus:bg-green-700 focus:shadow-none active:bg-green-900 hover:bg-green-900 hover:text-white active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
                                         Pelajari lebih lanjut
                                     </Link>
                                 </div>
@@ -176,7 +178,7 @@ const HalamanUtama = () => {
                     <FadeInUp delay=".4s">
                         <div className="font-semibold text-2xl text-center text-white drop-shadow-md">
                             Dengan komitmen yang kuat mensukseskan pembangunan agar menghasilkan kualitas bangunan yang sesuai
-                            dengan standar sertifikat.
+                            dengan standar sertifikasi.
                         </div>
                     </FadeInUp>
                 </div>
@@ -232,6 +234,7 @@ const HalamanUtama = () => {
                         <center>
                             <Link 
                                 href={`https://wa.me/6282125560808?text=${encodeURIComponent(`Halo,saya mau konsultasi dengan PT Cipta Indah Citra`)}`}
+                                target="_blank"
                                 className="mt-16 font-semibold font-semibold bg-customYellow text-white lg:w-2/3 sm:w-full py-2 flex items-center justify-center border-customYellow rounded border hover:shadow-lg"
                             >
                                 Konsultasi Sekarang
@@ -250,6 +253,7 @@ const HalamanUtama = () => {
                             <FadeInUp delay=".4s">
                                 <Link 
                                     href={`https://wa.me/6282125560808?text=${encodeURIComponent(`Halo,saya mau konsultasi dengan PT Cipta Indah Citra`)}`}
+                                    target="_blank"
                                     className="border border-green-900 bg-white rounded py-2 mb-2 lg:w-5/6 sm:w-full flex items-center justify-center text-green-900 hover:bg-green-900 hover:text-white"
                                 >
                                     <Whatsapp /><span className="ml-2">Konsultasi via WhatsApp</span>
