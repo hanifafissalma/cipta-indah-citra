@@ -64,7 +64,7 @@ const Footer = () => {
                             <span className="material-symbols-outlined text-green-900">
                                 phone
                             </span>
-                            <span className="ml-2 text-sm">0821-2566-0808</span>
+                            <span className="ml-2 text-sm">0821-2556-0808</span>
                         </div>
                         <Link href="mailto:pt.ciptaindahcitraptk@gmail.com" className="mb-2 flex flex-row gap-2 hover:text-green-900">
                             <span className="material-symbols-outlined text-green-900">
