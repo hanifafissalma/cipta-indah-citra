@@ -36,7 +36,7 @@ const HubungiKami = () => {
         `;
 
         const encodedMessage = encodeURIComponent(message);
-        const phoneNumber = "6282125660808";
+        const phoneNumber = "6282125560808";
 
         const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
