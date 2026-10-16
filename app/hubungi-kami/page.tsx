@@ -168,7 +168,7 @@ const HubungiKami = () => {
                                                     <option value="">--Pilih Layanan--</option>
                                                     <option value="Design Arsitektur">1. Design Arsitektur</option>
                                                     <option value="Manajemen Konstruksi">2. Manajemen Konstruksi (MK)</option>
-                                                    <option value="Sertifikasi Laik Fungsi">3. Sertifikasi Laik Fungsi (SLF)</option>
+                                                    <option value="Sertifikat Laik Fungsi">3. Sertifikat Laik Fungsi (SLF)</option>
                                                 </select>
                                             }
                                         />

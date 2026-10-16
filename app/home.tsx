@@ -66,9 +66,10 @@ const HalamanUtama = () => {
                         </h1>
                     </FadeInUp>
                     <FadeInUp delay=".4s">
-                        <p className="text-lg md:text-2xl text-black drop-shadow-xl font-medium mb-6 lg:w-3/4 sm:w-full">
-                            Kami menangani design arsitektur, manajemen konstruksi (MK), dan sertifikasi
-                            laik fungsi (SLF) untuk rumah, gedung, dan proyek komersial.
+                        <p className="text-md md:text-xl text-black drop-shadow-xl font-medium mb-6 lg:w-3/4 sm:w-full">
+                            Solusi terpadu untuk proyek Anda: mulai dari desain arsitektur, Manajemen Konstruksi (MK), 
+                            Sertifikat Laik Fungsi (SLF), hingga sistem mekanikal, elektrikal, dan teknik lingkungan untuk rumah, 
+                            gedung, maupun area komersial.
                         </p>
                     </FadeInUp>
                     <FadeInUp delay=".6s">
@@ -222,14 +223,14 @@ const HalamanUtama = () => {
                                 <div className="relative h-48 overflow-hidden text-white rounded-t-md">
                                     <Image 
                                         src="/5.png"
-                                        alt="Sertifikasi Laik Fungsi"
+                                        alt="Sertifikat Laik Fungsi"
                                         fill
                                         style={{ objectFit: "cover" }}
                                     />
                                 </div>
                                 <div className="p-4">
                                     <h3 className="mb-2 text-slate-600 text-xl font-semibold">
-                                        Sertifikasi Laik Fungsi
+                                        Sertifikat Laik Fungsi
                                     </h3>
                                     <p className="text-slate-600 leading-normal font-light text-justify">
                                         Jasa sertifikasi sebagai syarat gedung sebelum dioperasikan atau untuk persyaratan akreditasi

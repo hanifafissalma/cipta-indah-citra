@@ -21,7 +21,7 @@ const sertifikasiLaikFungsi = () => {
             >
                 <div className="w-5/6 mx-auto">
                     <FadeInUp>
-                        <h1 className="text-4xl font-bold drop-shadow-lg">Sertifikasi Laik Fungsi</h1>
+                        <h1 className="text-4xl font-bold drop-shadow-lg">Sertifikat Laik Fungsi</h1>
                     </FadeInUp>
                     <FadeInUp delay=".4s">
                         <p className="text-xl mt-4 md:w-full lg:w-2/3 mx-auto font-bold drop-shadow-lg">
@@ -44,7 +44,7 @@ const sertifikasiLaikFungsi = () => {
                                 />
                             </div>
                             <div className="col-span-3 text-justify text-slate-600 font-semibold">
-                                <b>Layanan Sertifikasi Laik Fungsi</b> yang kami lakukan berpedoman 
+                                <b>Layanan Sertifikat Laik Fungsi</b> yang kami lakukan berpedoman 
                                 dengan PP 16/2021 dan aplikasi SIMBG, untuk masing-masing fungsi gedung, 
                                 ketinggian dan umur gedung menggunakan daftar simak yang berbeda-beda 
                                 disesuaikan dengan fungsi gedung, kelengkapan data dan legalitas 
@@ -58,7 +58,7 @@ const sertifikasiLaikFungsi = () => {
                 <div className="w-5/6 mx-auto py-16">
                     <FadeInUp>
                         <center>
-                            <div className="text-3xl font-bold mb-4 border-b-2 border-gray-800 inline-block">Tujuan Sertifikasi Laik Fungsi</div>
+                            <div className="text-3xl font-bold mb-4 border-b-2 border-gray-800 inline-block">Tujuan Sertifikat Laik Fungsi</div>
                         </center>
                     </FadeInUp>
                     <div className="mt-6 grid lg:grid-cols-2 md:grid-cols-1 gap-4">

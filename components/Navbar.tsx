@@ -67,7 +67,7 @@ const Navbar = () => {
                                         href="/sertifikasi-laik-fungsi"
                                         className="block px-4 py-2 text-green-900 hover:bg-green-900 hover:text-white"
                                     >
-                                        3. Sertifikasi Laik Fungsi
+                                        3. Sertifikat Laik Fungsi
                                     </Link>
                                 </div>
                                 </div>
@@ -149,7 +149,7 @@ const Navbar = () => {
                                         href="/sertifikasi-laik-fungsi"
                                         className="block px-4 py-2 text-green-900 hover:bg-green-900 hover:text-white"
                                     >
-                                        3. Sertifikasi Laik Fungsi
+                                        3. Sertifikat Laik Fungsi
                                     </Link>
                                 </div>
                             )}

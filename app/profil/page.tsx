@@ -24,9 +24,9 @@ const Profil = () => {
                     </FadeInUp>
                     <FadeInUp delay=".4s">
                         <p className="text-xl mt-4 md:w-full lg:w-2/3 mx-auto font-bold drop-shadow-lg">
-                            Perusahaan konsultan yang bergerak dibidang Design Arsitektur, 
-                            Manajemen Konstruksi (MK), dan Pengkaji Teknis Pemeriksaan Syarat 
-                            Sertifikasi Laik Fungsi (SLF)
+                            Perusahaan konsultan dengan solusi terpadu: mulai dari desain arsitektur, 
+                            Manajemen Konstruksi (MK), Pengkaji Teknis Sertifikat Laik Fungsi (SLF), 
+                            hingga sistem mekanikal, elektrikal, dan teknik lingkungan
                         </p>
                     </FadeInUp>
                 </div>
@@ -41,13 +41,14 @@ const Profil = () => {
                     <div className="md:w-full lg:w-2/3 mx-auto mt-8 text-center">
                         <FadeInUp>
                             <p>
-                                Konsultan Total Layanan mulai dari Design Gedung, 
-                                Manajemen Konstruksi (MK) hingga Pengkaji Teknis / 
-                                Pemeriksaan Syarat Sertifikasi Laik Fungsi (SLF)
+                                Menjadi konsultan total layanan untuk rumah, gedung, maupun area komersial: 
+                                mulai dari desain arsitektur dan struktur, Manajemen Konstruksi (MK), 
+                                Pengkaji Teknis Sertifikat Laik Fungsi (SLF), hingga perencanaan sistem 
+                                mekanikal, elektrikal, dan teknik lingkungan gedung
                             </p>
                         </FadeInUp>
                         <FadeInUp>
-                            <p className="mt-4"><b>Bidang</b>: Arsitektur, Struktur, Mekanikal, Elektrikal & Tek. Lingkungan</p>
+                            <p className="mt-4"><b>Bidang</b>: Arsitektur, Struktur, Mekanikal Gedung, Elektrikal Gedung & Teknik Lingkungan</p>
                         </FadeInUp>
                         <FadeInUp>
                             <p><b>Semboyan</b>:  R2S  (Responsive, SMART & Solutio)</p>
@@ -68,18 +69,24 @@ const Profil = () => {
                                 <li>
                                     Konsultan Design/Perencanaan metode BIM (Building Information Modeling), 
                                     3 dimensi & multi disiplin dalam 1 file sehingga menghasilkan design akurat, 
-                                    cepat, efisien & integrited serta pemilik bisa tahu progress di ponsel 
+                                    cepat, efisien & terintegrasi, serta pemilik bisa tahu progress di ponsel 
                                     Android program BIM-X.
                                 </li>
                                 <li>
                                     Konsultan Manajemen Konstruksi (MK) mampu menjaga mutu, volume/quantity & 
-                                    waktu & review sampai mengeluarkan rekomendasi untuk mengeluarkan Sertifikasi 
-                                    Laik Fungsi (SLF) apabila gedung sudah selesai & dioperasikan.
+                                    waktu, serta melakukan review hingga memberikan rekomendasi penerbitan 
+                                    Sertifikat Laik Fungsi (SLF) setelah gedung selesai & siap dioperasikan.
                                 </li>
                                 <li>
                                     Pengkaji Teknis ber-SKA : Arsitek, Struktur, Mekanikal, Elektrikal & Teknik Lingkungan 
-                                    untuk memeriksa syarat/ketentuan memperoleh: Sertifikasi Laik Fungsi (SLF) Gedung bagi 
+                                    untuk memeriksa syarat/ketentuan memperoleh Sertifikat Laik Fungsi (SLF) bagi 
                                     gedung yang sudah ada/lama berdiri.
+                                </li>
+                                <li>
+                                    Perencanaan sistem mekanikal gedung (tata udara, plumbing & proteksi kebakaran), 
+                                    elektrikal gedung (instalasi listrik, penerangan & penangkal petir), serta teknik 
+                                    lingkungan (air bersih, pengolahan air limbah, drainase & kajian lingkungan) agar 
+                                    bangunan aman, nyaman, dan sesuai standar.
                                 </li>
                             </ol>
                         </FadeInUp>
@@ -102,7 +109,8 @@ const Profil = () => {
                     </FadeInUp>
                     <FadeInUp delay=".4s">
                         <div className="font-semibold text-2xl text-center text-white drop-shadow-md md:w-full lg:w-2/3 mx-auto">
-                            Memberikan layanan terbaik dengan profesionalisme tinggi untuk memenuhi kebutuhan setiap klien
+                            Didukung tenaga ahli lintas disiplin, kami memberikan layanan terbaik dengan profesionalisme 
+                            tinggi untuk memenuhi kebutuhan setiap klien
                         </div>
                     </FadeInUp>
                 </div>

@@ -94,7 +94,7 @@ const PengalamanKonsultan = () => {
                                 <option value="">--Pilih Layanan--</option>
                                 <option value="design">1. Design Arsitektur</option>
                                 <option value="konstruksi">2. Manajemen Konstruksi (MK)</option>
-                                <option value="slf">3. Sertifikasi Laik Fungsi (SLF)</option>
+                                <option value="slf">3. Sertifikat Laik Fungsi (SLF)</option>
                             </select>
                         </div>
                     </FadeInUp>
