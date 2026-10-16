@@ -81,7 +81,7 @@ const Footer = () => {
                                 <div>Jalan</div>
                                 <br/> */}
                                 <b>Kalimantan Barat</b>
-                                <div>Gg. Mekar No.8, Akcaya, Kec. Pontianak Sel., Kota Pontianak, Kalimantan Barat 78113</div>
+                                <div>Jl. Mekar No 8, Akcaya, Kec. Pontianak Sel., Kota Pontianak, Kalimantan Barat 78113</div>
                             </span>
                         </div>
                     </div>
